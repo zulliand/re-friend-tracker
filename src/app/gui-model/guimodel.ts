@@ -6,7 +6,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "ZHAW Requirements Engineering Friend Tracker (FS2024)",
+            "title": "Andres Zulliger Requirements Engineering Friend Tracker (FS2024)",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -28,7 +28,10 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id":   "location",
+                            "id": "nickname", "type": "text", "name": "Nickname", "width": 2, "required": true
+                        },
+                        {
+                            "id": "location",
                             "type": "autocomplete",
                             "name": "Location",
                             "url": "/location",
@@ -95,7 +98,7 @@ export class GuiModel {
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
                         {
-                            "id":   "activity",
+                            "id": "activity",
                             "type": "autocomplete",
                             "name": "Activity",
                             "url": "/activity",
@@ -137,6 +140,13 @@ export class GuiModel {
                             "icon": "fa-cubes",
                             "color": "yellow",
                             "page": "locationspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Groups",
+                            "icon": "fa-group",
+                            "color": "magenta",
+                            "page": "groupspage",
                         },
                     ]
                 },
@@ -195,6 +205,15 @@ export class GuiModel {
                         },
                     ]
                 },
+                {
+                    "id": "groupspage", "elementList": [{
+                        "type": "backbutton",
+                    }, {
+                        "type": "newButton", "name": "NewGroup", "icon": "fa-weixin", "color": "green", "form": {
+                            "form": "GroupForm"
+                        }
+                    }]
+                }
             ]
         }
     };
