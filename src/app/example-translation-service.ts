@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {TranslationService} from "path-framework/app/path-framework/service/translation.service";
+import { Injectable } from "@angular/core";
+import { TranslationService } from "path-framework/app/path-framework/service/translation.service";
 
 @Injectable()
 export class ExampleTranslationService extends TranslationService {
@@ -16,34 +16,34 @@ export class ExampleTranslationService extends TranslationService {
     private getExampleTranslations() {
         const languageCode: string = this.getUserLanguage();
 
-        // put additional application translations here
+        // Hier werden die Texte ohne geschweifte Klammern angepasst
         return {
             "Activity": "Activity",
             "AddActivity": "Add Activity",
             "AddFriend": "Add Friend",
-            "Activities" : "Activities",
-            "Birthday" : "Birthday",
-            "Comments" : "Comments",
-            "CreationDate" : "Creation Date",
-            "Date" : "Date",
-            "EditActivity" : "Edit Activity",
-            "EditFriend" : "Edit Friend",
-            "EditLocation" : "Edit Location",
-            "Friends" : "Friends",
-            "Friend" : "Friend",
-            "FamilyName" : "Family Name",
-            "FirstName" : "First Name",
-            "Group" : "Group",
-            "Groups" : "Groups",
-            "GroupName" : "Group Name",
-            "Location" : "Location",
-            "LocationName" : "Location Name",
-            "Name" : "Name",
-            "NewActivity" : "New Activity",
-            "NewFriend" : "New Friend",
-            "NewGroup" : "New Group",
-            "NewLocation" : "New Location",
-            "Nickname" : "Nickname"
+            "Activities": "Activities",
+            "Birthday": "Birthday",
+            "Comments": "Comments",
+            "CreationDate": "Creation Date",
+            "Date": "Date",
+            "EditActivity": "Edit Activity",
+            "EditFriend": "Edit Friend",
+            "EditLocation": "Edit Location",
+            "Friends": "Friends",
+            "Friend": "Friend",
+            "FamilyName": "Family Name",
+            "FirstName": "First Name",
+            "Group": "Group",
+            "Groups": "Groups",
+            "GroupName": "Group Name",
+            "Location": "Location",
+            "LocationName": "Location Name",
+            "Name": "Name",
+            "NewActivity": "New Activity",
+            "NewFriend": "New Friend",
+            "NewGroup": "New Group",
+            "NewLocation": "New Location",
+            "Nickname": "Nickname"
         };
     }
 }
