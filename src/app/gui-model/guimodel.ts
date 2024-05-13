@@ -86,7 +86,7 @@ export class GuiModel {
                         {
                             "id": "name",
                             "type": "text",
-                            "name": "LocationName",
+                            "name": "Location Name",
                             "width": 2,
                             "required": true
                         },
@@ -112,7 +112,7 @@ export class GuiModel {
                         {
                             "id": "name",
                             "type": "text",
-                            "name": "GroupName",
+                            "name": "Group Name",
                             "width": 2,
                             "required": true
                         },
@@ -138,7 +138,7 @@ export class GuiModel {
                         {
                             "id": "name",
                             "type": "text",
-                            "name": "ActivityName",
+                            "name": "Activity Name",
                             "width": 2,
                             "required": true
                         },
