@@ -9,8 +9,10 @@ export class ExampleTranslationService extends TranslationService {
         // Prefer custom translations if available
         const translation = myTranslations.get(key);
         if (translation == null) {
+            console.log(`Translation not found for key: ${key}`); // Debugging-Anweisung hinzufügen
             return super.getTranslation(key);
         }
+        console.log(`Translation found for key: ${key}, value: ${translation}`); // Debugging-Anweisung hinzufügen
         return translation;
     }
 
