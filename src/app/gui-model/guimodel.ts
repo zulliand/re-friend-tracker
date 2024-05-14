@@ -5,38 +5,38 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": this.translationService.getTranslation("Andres Zulliger Requirements Engineering Friend Tracker (FS2024)"),
+            "title": "Andres Zulliger Requirements Engineering Friend Tracker (FS2024)",
             "formList": [
                 {
                     "id": "FriendForm",
-                    "title": this.translationService.getTranslation("MainMenu"),
+                    "title": "MainMenu",
                     "url": "/friend",
                     "formFieldList": [
                         {
                             "id": "familyName",
                             "type": "text",
-                            "name": this.translationService.getTranslation("FamilyName"),
+                            "name": "FamilyName",
                             "width": 1,
                             "required": true
                         },
                         {
                             "id": "firstName",
                             "type": "text",
-                            "name": this.translationService.getTranslation("FirstName"),
+                            "name": "FirstName",
                             "width": 1,
                             "required": true
                         },
                         {
                             "id": "nickname",
                             "type": "text",
-                            "name": this.translationService.getTranslation("Nickname"),
+                            "name": "Nickname",
                             "width": 2,
                             "required": true
                         },
                         {
                             "id": "group",
                             "type": "autocomplete",
-                            "name": this.translationService.getTranslation("Group"),
+                            "name": "Group",
                             "url": "/group",
                             "form": "GroupForm",
                             "width": 2
@@ -44,7 +44,7 @@ export class GuiModel {
                         {
                             "id": "location",
                             "type": "autocomplete",
-                            "name": this.translationService.getTranslation("Location"),
+                            "name": "Location",
                             "url": "/location",
                             "form": "LocationForm",
                             "width": 2
@@ -52,99 +52,99 @@ export class GuiModel {
                         {
                             "id": "birthdate",
                             "type": "date",
-                            "name": this.translationService.getTranslation("Birthday"),
+                            "name": "Birthday",
                             "width": 2
                         },
                         {
                             "id": "comment",
                             "type": "text",
-                            "name": this.translationService.getTranslation("Comments"),
+                            "name": "Comments",
                             "width": 2,
                             "height": 4,
                             "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
-                            "name": this.translationService.getTranslation("Delete")
+                            "name": "Delete"
                         },
                         {
                             "type": "cancelButton",
-                            "name": this.translationService.getTranslation("Cancel")
+                            "name": "Cancel"
                         },
                         {
                             "type": "okButton",
-                            "name": this.translationService.getTranslation("Ok")
+                            "name": "Ok"
                         }
                     ]
                 },
                 {
                     "id": "LocationForm",
-                    "title": this.translationService.getTranslation("Location"),
+                    "title": "Location",
                     "url": "/location",
                     "formFieldList": [
                         {
                             "id": "name",
                             "type": "text",
-                            "name": this.translationService.getTranslation("Location Name"),
+                            "name": "Location Name",
                             "width": 2,
                             "required": true
                         },
                         {
                             "type": "deleteButton",
-                            "name": this.translationService.getTranslation("Delete")
+                            "name": "Delete"
                         },
                         {
                             "type": "cancelButton",
-                            "name": this.translationService.getTranslation("Cancel")
+                            "name": "Cancel"
                         },
                         {
                             "type": "okButton",
-                            "name": this.translationService.getTranslation("Ok")
+                            "name": "Ok"
                         }
                     ]
                 },
                 {
                     "id": "GroupForm",
-                    "title": this.translationService.getTranslation("Group"),
+                    "title": "Group",
                     "url": "/group",
                     "formFieldList": [
                         {
                             "id": "name",
                             "type": "text",
-                            "name": this.translationService.getTranslation("Group Name"),
+                            "name": "Group Name",
                             "width": 2,
                             "required": true
                         },
                         {
                             "type": "deleteButton",
-                            "name": this.translationService.getTranslation("Delete")
+                            "name": "Delete"
                         },
                         {
                             "type": "cancelButton",
-                            "name": this.translationService.getTranslation("Cancel")
+                            "name": "Cancel"
                         },
                         {
                             "type": "okButton",
-                            "name": this.translationService.getTranslation("Ok")
+                            "name": "Ok"
                         }
                     ]
                 },
                 {
                     "id": "ActivityForm",
-                    "title": this.translationService.getTranslation("Activity"),
+                    "title": "Activity",
                     "url": "/activity",
                     "formFieldList": [
                         {
                             "id": "name",
                             "type": "text",
-                            "name": this.translationService.getTranslation("Activity Name"),
+                            "name": "Activity Name",
                             "width": 2,
                             "required": true
                         },
                         {
                             "id": "location",
                             "type": "autocomplete",
-                            "name": this.translationService.getTranslation("Location"),
+                            "name": "Location",
                             "url": "/location",
                             "form": "LocationForm",
                             "width": 2
@@ -152,7 +152,7 @@ export class GuiModel {
                         {
                             "id": "participants",
                             "type": "autocomplete",
-                            "name": this.translationService.getTranslation("Participants"),
+                            "name": "Participants",
                             "url": "/friend",
                             "form": "FriendForm",
                             "width": 2,
@@ -160,27 +160,27 @@ export class GuiModel {
                         },
                         {
                             "type": "deleteButton",
-                            "name": this.translationService.getTranslation("Delete")
+                            "name": "Delete"
                         },
                         {
                             "type": "cancelButton",
-                            "name": this.translationService.getTranslation("Cancel")
+                            "name": "Cancel"
                         },
                         {
                             "type": "okButton",
-                            "name": this.translationService.getTranslation("Ok")
+                            "name": "Ok"
                         }
                     ]
                 },
                 {
                     "id": "AddActivityForm",
-                    "title": this.translationService.getTranslation("Add Activity"),
+                    "title": "Add Activity",
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
                         {
                             "id": "activity",
                             "type": "autocomplete",
-                            "name": this.translationService.getTranslation("Activity"),
+                            "name": "Activity",
                             "url": "/activity",
                             "defaultKey": "activityKey",
                             "readonly": true,
@@ -189,15 +189,15 @@ export class GuiModel {
                         },
                         {
                             "type": "deleteButton",
-                            "name": this.translationService.getTranslation("Delete")
+                            "name": "Delete"
                         },
                         {
                             "type": "cancelButton",
-                            "name": this.translationService.getTranslation("Cancel")
+                            "name": "Cancel"
                         },
                         {
                             "type": "okButton",
-                            "name": this.translationService.getTranslation("Ok")
+                            "name": "Ok"
                         }
                     ]
                 }
@@ -205,32 +205,32 @@ export class GuiModel {
             "pageList": [
                 {
                     "id": "mainmenu",
-                    "name": this.translationService.getTranslation("MainMenu"), // Sicherstellen, dass der Schlüssel korrekt ist
+                    "name": "MainMenu", // Sicherstellen, dass der Schlüssel korrekt ist
                     "elementList": [
                         {
                             "type": "button",
-                            "name": this.translationService.getTranslation("Friends"),
+                            "name": "Friends",
                             "icon": "fa-user",
                             "color": "blue",
                             "page": "friendspage"
                         },
                         {
                             "type": "button",
-                            "name": this.translationService.getTranslation("Locations"),
+                            "name": "Locations",
                             "icon": "fa-home",
                             "color": "yellow",
                             "page": "locationspage"
                         },
                         {
                             "type": "button",
-                            "name": this.translationService.getTranslation("Groups"),
+                            "name": "Groups",
                             "icon": "fa-group",
                             "color": "magenta",
                             "page": "groupspage"
                         },
                         {
                             "type": "button",
-                            "name": this.translationService.getTranslation("Activities"),
+                            "name": "Activities",
                             "icon": "fa-tasks",
                             "color": "green",
                             "page": "activityspage"
@@ -245,7 +245,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": this.translationService.getTranslation("New Friend"),
+                            "name": "New Friend",
                             "icon": "fa-user",
                             "color": "green",
                             "form": {
@@ -272,7 +272,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": this.translationService.getTranslation("New Location"),
+                            "name": "New Location",
                             "icon": "fa-home",
                             "color": "green",
                             "form": {
@@ -299,7 +299,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": this.translationService.getTranslation("New Group"),
+                            "name": "New Group",
                             "icon": "fa-group",
                             "color": "green",
                             "form": {
@@ -326,7 +326,7 @@ export class GuiModel {
                         },
                         {
                             "type": "newButton",
-                            "name": this.translationService.getTranslation("New Activity"),
+                            "name": "New Activity",
                             "icon": "fa-tasks",
                             "color": "green",
                             "form": {

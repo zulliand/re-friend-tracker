@@ -17,8 +17,10 @@ export class ExampleTranslationService extends TranslationService {
     }
 
     private getExampleTranslations() {
+      //  const languageCode: string = this.getUserLanguage();
+
         return {
-            "MainMenu": "MainMenu", // Sicherstellen, dass dieser Schlüssel vorhanden ist
+            "MainMenu": "Main Menu", // Sicherstellen, dass dieser Schlüssel vorhanden ist
             "Friends": "Friends",
             "Locations": "Locations",
             "Groups": "Groups",
