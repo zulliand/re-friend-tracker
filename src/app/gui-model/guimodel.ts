@@ -258,9 +258,8 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "form": {
-                                "form": "FriendForm"
-                            }
+                            "page": "activityspage"
+                            
                         }
                     ]
                 },
@@ -339,10 +338,9 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/activity",
-                            "form": {
-                                "form": "ActivityForm"
-                            }
+                            "page": "friendspage"
                         }
+
                     ]
                 }
             ]
