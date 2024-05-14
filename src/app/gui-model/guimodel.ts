@@ -1,4 +1,4 @@
-import { ExampleTranslationService } from '../example-translation-service'; // Angepasster Pfad
+import { ExampleTranslationService } from "../example-translation-service"; // Angepasster Pfad
 
 export class GuiModel {
     constructor(private translationService: ExampleTranslationService) {}
@@ -9,7 +9,7 @@ export class GuiModel {
             "formList": [
                 {
                     "id": "FriendForm",
-                    "title": this.translationService.getTranslation("Friend"),
+                    "title": this.translationService.getTranslation("MainMenu"),
                     "url": "/friend",
                     "formFieldList": [
                         {
@@ -205,7 +205,7 @@ export class GuiModel {
             "pageList": [
                 {
                     "id": "mainmenu",
-                    "name": this.translationService.getTranslation("MainMenu"), // Sicherstellen, dass der Schlüssel korrekt ist
+                    "name": this.translationService.getTranslation("Friends"), // Sicherstellen, dass der Schlüssel korrekt ist
                     "elementList": [
                         {
                             "type": "button",

@@ -18,7 +18,7 @@ export class ExampleTranslationService extends TranslationService {
 
     private getExampleTranslations() {
         return {
-            "MainMenu": "Main Menu", // Sicherstellen, dass dieser Schlüssel vorhanden ist
+            "MainMenu": "MainMenu", // Sicherstellen, dass dieser Schlüssel vorhanden ist
             "Friends": "Friends",
             "Locations": "Locations",
             "Groups": "Groups",
@@ -50,3 +50,4 @@ export class ExampleTranslationService extends TranslationService {
         };
     }
 }
+//
