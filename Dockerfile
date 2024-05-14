@@ -12,4 +12,4 @@ RUN npm run build
 
 # Docker Run Command
 EXPOSE 8080
-CMD [ "node", "/usr/src/app/server/server.js" ]
+CMD [ "node", "/usr/server/server.js" ]
