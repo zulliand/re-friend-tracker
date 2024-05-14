@@ -205,7 +205,7 @@ export class GuiModel {
             "pageList": [
                 {
                     "id": "mainmenu",
-                    "name": this.translationService.getTranslation("Friends"), // Sicherstellen, dass der Schlüssel korrekt ist
+                    "name": this.translationService.getTranslation("MainMenu"), // Sicherstellen, dass der Schlüssel korrekt ist
                     "elementList": [
                         {
                             "type": "button",
