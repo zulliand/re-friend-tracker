@@ -64,6 +64,5 @@ export class ExampleAppComponent extends PathAppComponent {
     protected getHandlers() {
         return handler;
     }
-
 }
 //

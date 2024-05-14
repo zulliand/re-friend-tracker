@@ -11,3 +11,4 @@ import { TranslationService } from "path-framework/app/path-framework/service/tr
     providers: [{ provide: TranslationService, useClass: ExampleTranslationService }] // Provider hinzufügen
 })
 export class ExampleAppModule { }
+//
