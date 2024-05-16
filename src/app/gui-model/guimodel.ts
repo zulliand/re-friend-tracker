@@ -327,16 +327,6 @@ export class GuiModel {
                             "type": "backbutton"
                         },
                         {
-                            "type": "button",
-                            "name": "Edit Friend",
-                            "icon": "fa-regular fa-user",
-                            "color": "green",
-                            "url": "/friend/:friendKey", // Stellt sicher, dass der Schlüssel übergeben wird
-                            "form": {
-                                "form": "FriendForm"
-                            }
-                        },
-                        {
                             "type": "newButton",
                             "name": "New Activity",
                             "icon": "fa-tasks",
