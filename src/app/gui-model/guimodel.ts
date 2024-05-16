@@ -10,7 +10,7 @@ export class GuiModel {
                 {
                     "id": "FriendForm",
                     "title": "MainMenu",
-                    "url": "/friend",
+                    "url": "/friend/:friendKey", // Angepasst, um spezifische Freunde zu bearbeiten
                     "formFieldList": [
                         {
                             "id": "familyName",
@@ -80,7 +80,7 @@ export class GuiModel {
                 {
                     "id": "LocationForm",
                     "title": "Location",
-                    "url": "/location",
+                    "url": "/location/:locationKey", // Angepasst, um spezifische Locations zu bearbeiten
                     "formFieldList": [
                         {
                             "id": "name",
@@ -106,7 +106,7 @@ export class GuiModel {
                 {
                     "id": "GroupForm",
                     "title": "Group",
-                    "url": "/group",
+                    "url": "/group/:groupKey", // Angepasst, um spezifische Gruppen zu bearbeiten
                     "formFieldList": [
                         {
                             "id": "name",
@@ -132,7 +132,7 @@ export class GuiModel {
                 {
                     "id": "ActivityForm",
                     "title": "Activity",
-                    "url": "/activity",
+                    "url": "/activity/:activityKey", // Angepasst, um spezifische Aktivitäten zu bearbeiten
                     "formFieldList": [
                         {
                             "id": "name",
@@ -153,7 +153,7 @@ export class GuiModel {
                             "id": "participants",
                             "type": "autocomplete",
                             "name": "Participants",
-                            "url": "/friend",
+                            "url": "/activity/:activityKey/friend", // Angepasst, um nur Teilnehmer der spezifischen Aktivität zu laden
                             "form": "FriendForm",
                             "width": 2,
                             "multiple": true
@@ -175,7 +175,7 @@ export class GuiModel {
                 {
                     "id": "AddActivityForm",
                     "title": "Add Activity",
-                    "url": "/friend/:friendKey/activity",
+                    "url": "/friend/:friendKey/activity", // Unverändert
                     "formFieldList": [
                         {
                             "id": "activity",
@@ -205,7 +205,7 @@ export class GuiModel {
             "pageList": [
                 {
                     "id": "mainmenu",
-                    "name": "MainMenu", // Sicherstellen, dass der Schlüssel korrekt ist
+                    "name": "MainMenu",
                     "elementList": [
                         {
                             "type": "button",
@@ -258,8 +258,11 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "page": "activityspage"
-                            
+                            "form": {
+                                "form": "FriendForm"
+                            },
+                            "page": "friendActivitiesPage",
+                            "key": "friendKey" // Stellt sicher, dass der Schlüssel korrekt übergeben wird
                         }
                     ]
                 },
@@ -324,6 +327,16 @@ export class GuiModel {
                             "type": "backbutton"
                         },
                         {
+                            "type": "button",
+                            "name": "Edit Friend",
+                            "icon": "fa-regular fa-user",
+                            "color": "green",
+                            "url": "/friend/:friendKey", // Stellt sicher, dass der Schlüssel übergeben wird
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                        {
                             "type": "newButton",
                             "name": "New Activity",
                             "icon": "fa-tasks",
@@ -338,9 +351,67 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/activity",
-                            "page": "friendspage"
+                            "form": {
+                                "form": "ActivityForm"
+                            },
+                            "page": "activityParticipantsPage", // Fügt eine neue Seite hinzu, um Teilnehmer anzuzeigen
+                            "key": "activityKey" // Stellt sicher, dass der Schlüssel korrekt übergeben wird
                         }
-
+                    ]
+                },
+                {
+                    "id": "friendActivitiesPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton"
+                        },
+                        {
+                            "type": "button", // Hinzufügen des Bearbeiten-Buttons für Freund
+                            "name": "Edit Friend",
+                            "icon": "fa-edit",
+                            "color": "green",
+                            "url": "/friend/:friendKey", // URL zum Bearbeiten des Freundes
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "newButton", // Hinzufügen des Add Activity Buttons
+                            "name": "Add Activity",
+                            "icon": "fa-plus",
+                            "color": "blue",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-tasks",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity", // Lädt die Aktivitäten des spezifischen Freundes
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "activityParticipantsPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton"
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend", // Lädt die Teilnehmer der spezifischen Aktivität
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        }
                     ]
                 }
             ]
